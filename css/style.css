@@ -1,0 +1,446 @@
+:root {
+    --primary: rgb(180, 156, 0);
+    --bg: #010101;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;   
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: #fff;
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 5%;
+    background-color: rgba(1, 1, 1, 0.8);
+    border-bottom: 1px solid rgb(109, 95, 2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 1.7rem;
+    color: #fff;
+    font-style: italic;
+}
+
+.navbar .navbar-logo span{
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+    color:#fff;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover{
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after{
+    content:'';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s;
+}
+
+.navbar .navbar-nav a:hover::after{
+    transform:scaleX(0.5);
+}
+
+.navbar .navbar-extra a{
+    color:#fff;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-extra a:hover{
+    color:var(--primary);
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+/*Hero Section*/
+.hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image:url(../img/bar.jpg);
+    background-repeat: no-repeat ;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    opacity: 90%;
+}
+.hero::after{
+    content: '';    
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(0deg, rgba(1, 1, 3,1) 8%, rgba(255, 255, 255, 0) 20%);
+    bottom: 0;
+}
+.hero .content{
+    margin: auto;
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content h1 {
+    font-size: 4rem;
+    color:#fff;
+    text-shadow: 1px 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1;
+    text-align: center; 
+}
+
+.hero .content p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    line-height: 1.2;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px 3px rgba(1, 1, 3, 0.5);
+    
+}
+
+.hero .content h1 span{
+    color:var(--primary);
+}
+
+.hero .content .button-beli{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+    color:var(--bg);
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content .button-beli:hover{
+    transition: 0.2s;
+    color:#fff;
+    background-color: var(--primary);
+}
+
+/* About Section*/
+
+.about, .menu, .kontak{
+    padding: 7rem 7% 1.4rem;
+}
+.about h1, .menu h1, .kontak h1{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about h1 span, .menu h1 span, .kontak h1 span{
+    color: var(--primary);
+}
+
+.about .row{
+    display:flex;
+}
+
+.about .row .abt-img{
+    flex: 1 1  35rem;
+}
+
+.about .row .abt-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .row .content{
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.about .row .content h2{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.about .row .content p{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+    font-weight: 200;
+}
+
+/* Menu Section */
+.menu h1, .kontak h1{
+    margin-bottom: 1rem;
+}
+.menu p{
+    margin: auto;
+    max-width: 30rem;
+    text-align: center;
+    font-weight: 100;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+
+.menu .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    justify-content: center;
+}
+
+.menu .row .menu-card {
+    text-align: center;
+    padding-bottom: 3.5rem ;
+}
+.menu .row .menu-card img{
+    border-radius: 50%;
+    width: 80%;
+}
+
+.menu .row .menu-card-coffe{
+    margin: 1rem auto 0.5rem;
+}
+
+/* Kontak Section */
+
+.kontak .row{
+  display: flex;
+  background-color: #222;
+}
+
+.kontak .row .map{
+  flex:1  1 45rem;  
+  width: 100%;
+  object-fit: cover;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+
+
+
+.kontak p{
+  margin: auto;
+    max-width: 30rem;
+    text-align: center;
+    font-weight: 100;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.kontak .row form{
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.kontak .row form .group{
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  background-color: var(--bg);
+  border:1px solid;
+  border-color: #eee;
+  padding-left: 1rem;
+}
+
+.kontak .row form .group input{
+  width: 100%;
+  font-size: 1.5rem;
+  background: none;
+  padding: 1.5rem;
+  color: #fff;
+}
+
+.kontak .row .btn{
+  margin-top:2rem;
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  cursor: pointer;  
+}
+
+.kontak .row .btn:hover{
+  color:#fff;
+  background-color: var(--primary);
+  transition: 0.5s;
+}
+
+/*footer*/
+footer{
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0.5rem;
+}
+
+footer .social{
+  padding:0.5rem 0;
+}
+footer .social a{
+  color: #fff;
+  margin: 1rem;
+}
+footer .social a:hover{
+  color: rgb(0, 0, 0);
+  transition: 0.4s;
+}
+
+footer .links{
+  padding: 0.5rem 0;
+}
+footer .links a{
+  color: #fff;
+  font-size: 1rem;
+  margin: 1rem;
+}
+footer .links a:hover{
+  color: rgb(0, 0, 0);
+  transition: 0.4s;
+}
+footer .credit a{
+  font-size: 1rem;
+  font-weight: 700;
+  color: #010101;
+}
+
+
+
+/* Medie akses */
+
+/* Tablet */
+@media (max-width: 768px){
+  html{
+    font-size: 65%;
+    
+  }
+  #hamburger-menu {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .navbar .navbar-nav{
+    position:absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgb(228, 225, 225);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.5s;
+  }  
+  .navbar .navbar-nav.active{
+    right: 0;
+    transition: 0.5s;
+  }
+  .navbar .navbar-nav a{
+    color:var(--bg);
+    display: block;
+    font-size: 1.5rem;
+    margin:1.5rem;
+    padding:0.5rem;
+  }
+  .navbar .navbar-nav a::after{
+    transform-origin: 0 0;
+  }
+  .navbar .navbar-nav a:hover::after{
+    transform:scaleX(0.1);
+  }
+  /* about responsive */
+  .about .row{
+    flex-wrap: wrap;
+  }
+  
+  .about .row .abt-img img{
+    height:25rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content{
+    padding: 0;
+  }
+
+  .about .row .content h2{
+    margin-top: 0.3rem;
+    font-size: 2    rem;
+  }
+
+  .about .row .content p{
+    font-size: 1.5rem;
+  }
+
+  .menu h1{
+    font-size: 2.5rem;
+  }
+
+  .menu p{
+    font-size: 2rem;
+  }
+  .menu .row .menu-card-coffe{
+    font-size: 2rem;
+  }
+
+  .menu .row .menu-card-harga{
+    font-size: 1.5rem;
+  }
+
+  .kontak .row{
+    flex-wrap: wrap;
+  }
+
+  .kontak .row .map{
+    padding-top:0;
+  }
+  .kontak .row form{
+    padding: 4rem 2rem;
+  }
+
+  .kontak .row .map{
+    height: 35rem;
+  }
+  footer .links a{
+    font-size: 1.5rem;
+  }
+
+  footer .credit p{
+    font-size: 1.3rem;
+  }
+
+  footer .credit a{
+    font-size: 1.3rem;
+    font-weight:700;
+    color: #010101;
+  }
+}
+/* handphone */
+@media (max-width: 600px){
+  html{
+    font-size: 50%;
+  }  
+  
+}
+
